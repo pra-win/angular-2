@@ -1,0 +1,11 @@
+<nav-component></nav-component>
+<br>
+<a (click)="switchCategoryType(categoryTypes.expense)"> expense </a> &nbsp; &nbsp; 
+<a (click)="switchCategoryType(categoryTypes.income)">income</a>
+<br>
+<ul>
+    <div *ngFor="let category of categoryList">
+        <li *ngIf="categoryType == category.type"> {{category.name}} </li>
+    </div>
+    
+</ul>

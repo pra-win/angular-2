@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 @Component({
-    template: `<h1>Dashboard Landing Page</h1>`
+    template: `
+        <nav-component></nav-component>
+        <div><dashboard></dashboard></div>
+    `
 })
 
 export class DashboardLanding{

@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, ResponseContentType, RequestOptions} from '@angular/http';
+import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
+
+import { Constants } from '../common/constants';
 
 // const httpOptions = {
 //     headers: new Headers({
@@ -16,7 +18,7 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class LoginService{
-    private url = "http://localhost/angularAppAPI/login";
+    private url = Constants.APIBaseUrl+"angularAppAPI/login";
     private body = "userId=test&password=pass";
     constructor(private _http:Http){}
     login(data:any): Observable<any> {
